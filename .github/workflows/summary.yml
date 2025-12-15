@@ -21,6 +21,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build repository context
+        id: build_context
         run: |
           echo "# Repository Contents" > repo_context.txt
           cat *.c >> repo_context.txt
@@ -36,7 +37,7 @@ jobs:
           prompt: |
             You are an expert technical writer. Summarize this repository for engineers. Explain what the project does, its main components, and tech stack.
             Repository context:
-            ${{ steps.build-context.outputs.repo_context }}
+            ${{ steps.build-context.outputs }}
 
       - name: Save AI summary
         run: |
