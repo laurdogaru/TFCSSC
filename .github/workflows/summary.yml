@@ -23,7 +23,7 @@ jobs:
       - name: Build repository context
         run: |
           echo "# Repository Contents" > repo_context.txt
-          cat * >> repo_context.txt
+          cat *.c >> repo_context.txt
           echo "\n# README Preview" >> repo_context.txt
           head -n 100 README.md >> repo_context.txt || echo "No README found" >> repo_context.txt
           cat repo_context.txt
