@@ -27,11 +27,7 @@ jobs:
           cat *.c >> repo_context.txt
           echo "\n# README Preview" >> repo_context.txt
           head -n 100 README.md >> repo_context.txt || echo "No README found" >> repo_context.txt
-          ESCAPED=$(python - <<'PY'
-              import json
-              print(json.dumps(open("repo_context.txt","r",encoding="utf-8",errors="ignore").read()))
-              PY
-              )
+          ESCAPED=$(cat repo_context.txt)
           echo "repo_context=$ESCAPED"
 
 
