@@ -1,11 +1,13 @@
-## Repository Summary: TFCSSC
+## TFCSSC Repository Overview
 
-### Project Overview
-The TFCSSC (Two-Finger Complexity Search, Sort, and Comparison) repository implements a binary tree data structure with priority-based balancing. This project allows users to insert and delete nodes while maintaining tree properties through rotations, ensuring efficient data access and manipulation. The primary functions include inserting nodes with associated priority values, deleting nodes, and traversing the tree using various methods (in-order, pre-order, and post-order).
+### Project Description
+The TFCSSC project is a C implementation that demonstrates two fundamental data structures: a binary tree and a trie. It provides functionalities for insertion and deletion as well as traversal methods for the binary tree and basic trie operations, making it a valuable resource for engineers looking to understand and manipulate these structures effectively.
 
 ### Main Components
-1. **Node Structure**: The  struct contains the integer key, priority, and pointers to left, right, and parent nodes. This structure is key to building the binary tree.
-   
-2. **Node Initialization**: The  function allocates memory for a new node, initializes its properties, and establishes its parent-child relationships.
-
-3. **Insertion**: The  function places a new node in the correct position based on its key, followed by balancing
+1. **Binary Tree Implementation**:
+   - The binary tree is represented through a structure called , which encompasses an integer key, priority, and pointers to its left, right, and parent nodes.
+   - Key operations included:
+     - **Insertion**: Adds a new node to the tree with a specified key and priority, ensuring the tree remains balanced.
+     - **Deletion**: Removes a node from the tree and rebalances afterward.
+     - **Traversal Methods**: Includes in-order, pre-order, and post-order traversal functions to display the structure's contents.
+     - **Balancing**: Rot
