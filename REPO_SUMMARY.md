@@ -1,37 +1,38 @@
-# TFCSSC Repository Summary
+### Summary of the Repository
 
-## Project Overview
-The TFCSSC repository contains implementations of two fundamental data structures: a Trie and a Treap. The Trie is used primarily for storing strings and facilitating fast retrieval, while the Treap is a combination of a binary search tree and a heap, balancing itself on the priorities of its elements. These data structures are essential for optimizing search operations in various applications, such as dictionaries, databases, and more.
+**Project Title**: TFCSSC
 
-## Main Components
-1. **Trie Implementation ()**
-   - **Data Structure**:
-     - A  struct consisting of an array of child nodes (one for each letter of the English alphabet), a count of strings that pass through that node, and a count of how many children it has (nrfii).
+**Project Overview**:  
+The TFCSSC repository implements two key data structures commonly used in computer science for efficient storage and retrieval of information: a Trie and a Treap. These structures serve essential roles in various algorithms, particularly in tasks involving string manipulation (Trie) and maintaining sorted data with heap properties (Treap).
+
+---
+
+### Main Components
+
+1. **Trie**:
+   - **File**: 
+   - **Description**: The Trie (prefix tree) is designed to facilitate the storage and retrieval of strings in a way that supports efficient prefix searches. It allows for operations like insertion, deletion, and memory cleanup. Each node in the Trie represents a character and supports children for subsequent characters, making it especially useful for applications like autocomplete and spell checking.
    - **Key Functions**:
      - : Initializes a new Trie node.
-     - : Inserts a string into the Trie and updates counts.
-     - : Removes a string from the Trie and manages child nodes.
-     - : Recursively frees allocated memory for the Trie.
-   - **Main Method**: Demonstrates inserting and deleting a string.
+     - : Inserts a string into the Trie.
+     - : Removes a string from the Trie, adjusting the structure as necessary.
+     - : Frees the allocated memory for the Trie and its nodes.
 
-2. **Treap Implementation ()**
-   - **Data Structure**:
-     - A  struct representing each element in the Treap, which contains a , , and pointers to its left and right children as well as its parent.
+2. **Treap**:
+   - **File**: 
+   - **Description**: The Treap is a randomized binary search tree that maintains a priority for each node, ensuring that it remains balanced. This structure combines properties of both binary search trees (for order) and heaps (for balancing based on priority). It supports insertions, deletions, and traversal operations (in-order, pre-order, post-order).
    - **Key Functions**:
-     - : Initializes a new node.
-     - , : Perform rotations to maintain the Treap properties.
-     - : Ensures the Treap maintains its heap property based on node priorities.
-     - : Inserts a new key-value pair into the Treap while maintaining the binary search tree and heap properties.
-     - : Removes a node and ensures the Treap remains balanced.
-     - : Recursively frees allocated memory for the Treap.
-     - , , : Methods for traversing the Treap in different orders.
-   - **Main Method**: Demonstrates insertion and deletion in a Treap while providing an example of in-order traversal.
+     - : Initializes a new node with a specified value and priority.
+     - : Inserts a new node into the Treap, maintaining the binary search tree properties and balancing it based on priority.
+     - : Removes a node while keeping the structure balanced.
+     - : Cleans up the allocated memory for the Treap and its nodes.
+     - Traversal methods: Implemented for in-order, pre-order, and post-order outputs.
 
-## Tech Stack
+---
+
+### Tech Stack
+
 - **Programming Language**: C
-- **Memory Management**: Dynamic memory management using  and                total        used        free      shared  buff/cache   available
-Mem:        16378480      852700    13920068       45024     1958100    15525780
-Swap:        3145724           0     3145724 for node creation and destruction.
-- **Data Structures**: Implementations of Trie and Treap algorithms.
+- **Libraries**: Standard C libraries (stdlib.h for memory management, stdio.h for input and output)
 
-This repository serves as a foundational resource for engineers working on data structures in C and highlights efficient memory usage and algorithmic approaches to managing collections of strings and keys.
+This repository is structured to provide clear implementations and operations for both data structures. It showcases fundamental techniques in dynamic memory management and algorithm design that are crucial for efficient data handling in software engineering.
