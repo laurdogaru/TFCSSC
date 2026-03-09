@@ -1,38 +1,35 @@
-### Summary of the Repository
+## Repository Summary: TFCSSC
 
-**Project Title**: TFCSSC
-
-**Project Overview**:  
-The TFCSSC repository implements two key data structures commonly used in computer science for efficient storage and retrieval of information: a Trie and a Treap. These structures serve essential roles in various algorithms, particularly in tasks involving string manipulation (Trie) and maintaining sorted data with heap properties (Treap).
-
----
+### Overview
+The TFCSSC repository contains implementations of two data structures—Trie and Treap—written in C. These data structures are fundamental in computer science and are often utilized for efficient searching, inserting, and deleting of elements, making them useful in various applications such as dictionary implementations and priority queue management.
 
 ### Main Components
 
-1. **Trie**:
-   - **File**: 
-   - **Description**: The Trie (prefix tree) is designed to facilitate the storage and retrieval of strings in a way that supports efficient prefix searches. It allows for operations like insertion, deletion, and memory cleanup. Each node in the Trie represents a character and supports children for subsequent characters, making it especially useful for applications like autocomplete and spell checking.
-   - **Key Functions**:
+1. **Trie Implementation ()**:
+   - A Trie (pronounced try), is a tree-like data structure that stores strings in a way that allows for efficient prefix-based searching.
+   - Key Functions:
      - : Initializes a new Trie node.
      - : Inserts a string into the Trie.
-     - : Removes a string from the Trie, adjusting the structure as necessary.
-     - : Frees the allocated memory for the Trie and its nodes.
+     - : Deletes a string from the Trie, properly managing memory.
+     - : Frees all allocated memory in the Trie.
+     - Main function demonstrates the usage of insert and delete operations.
 
-2. **Treap**:
-   - **File**: 
-   - **Description**: The Treap is a randomized binary search tree that maintains a priority for each node, ensuring that it remains balanced. This structure combines properties of both binary search trees (for order) and heaps (for balancing based on priority). It supports insertions, deletions, and traversal operations (in-order, pre-order, post-order).
-   - **Key Functions**:
-     - : Initializes a new node with a specified value and priority.
-     - : Inserts a new node into the Treap, maintaining the binary search tree properties and balancing it based on priority.
-     - : Removes a node while keeping the structure balanced.
-     - : Cleans up the allocated memory for the Treap and its nodes.
-     - Traversal methods: Implemented for in-order, pre-order, and post-order outputs.
-
----
+2. **Treap Implementation ()**:
+   - A Treap is a hybrid data structure that combines properties of a binary search tree and a heap, making it efficient for random access and maintaining a prioritized structure.
+   - Key Functions:
+     - : Initializes a new Treap node with a given priority.
+     -  and : Perform the necessary rotations to maintain the Treap properties.
+     - : Balances the Treap by rotating nodes based on the priority.
+     - : Inserts a new value with priority into the Treap.
+     - : Deletes a node from the Treap while ensuring structural integrity.
+     - : Frees all allocated memory in the Treap.
+     - Traversal functions (, , and ) for displaying the Treap's elements.
+     - Main function demonstrates inserting and deleting elements in a Treap and outputs the in-order traversal of the tree.
 
 ### Tech Stack
-
 - **Programming Language**: C
-- **Libraries**: Standard C libraries (stdlib.h for memory management, stdio.h for input and output)
+- **Data Structures**: 
+  - Trie for string storage and manipulation.
+  - Treap for combined ordered and priority-based operations.
 
-This repository is structured to provide clear implementations and operations for both data structures. It showcases fundamental techniques in dynamic memory management and algorithm design that are crucial for efficient data handling in software engineering.
+This repository serves as a practical demonstration of fundamental data structures, focusing on their implementation and manipulative operations in C programming. It provides engineers with insight into applying theoretical concepts to practical coding scenarios.
