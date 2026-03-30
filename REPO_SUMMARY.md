@@ -1,31 +1,36 @@
-## Summary of Repository: TFCSSC
+## Repository Overview: TFCSSC
 
-### Project Overview
-The TFCSSC repository implements two types of data structures: a Trie and a Treap, which are often used in various applications involving efficient data retrieval and management. The Trie is utilized for prefix-based string searches, while the Treap combines features of both binary search trees and heaps for efficient key insertions and deletions with priority management.
+### Project Purpose
+The TFCSSC repository implements two foundational data structures in C: a Trie and a Treap. Both structures are designed for efficient operations related to searching, inserting, and deleting elements, making them ideal for various applications in software development and data management.
 
 ### Main Components
-1. **Trie ()**:
-   - Structure: The  structure consists of a count for storing how many times a particular string is present and an array of child nodes that represent subsequent characters.
-   - Key Functions:
-     - ****: Initializes a new Trie node.
-     - ****: Inserts a string into the Trie, incrementing the count.
-     - ****: Deletes a string from the Trie, decrementing the count as appropriate.
-     - ****: Frees memory associated with the Trie.
 
-2. **Treap ()**:
-   - Structure: A  structure defines the elements of the Treap, including a key, a priority, and pointers to left and right children, as well as a parent.
-   - Key Functions:
-     - ****: Initializes a new node with a value and a priority.
-     - ** / **: Balances the tree through rotations based on priorities.
-     - ****: Inserts a node and rebalances the Treap.
-     - ****: Deletes a node and maintains balance.
-     - ****: Frees memory for the entire tree.
-     - **Traversal Functions**: Includes in-order, pre-order, and post-order traversal functions to access tree data.
+1. **Trie (trie.c)**:
+    - A Trie is a tree-like data structure that stores a dynamic set of strings, enabling efficient retrieval and prefix-based searching.
+    - **Key Functions**:
+        - : Initializes a new Trie node.
+        - : Inserts a string into the Trie, updating the count of occurrences.
+        - : Removes a string from the Trie, adjusting counts and freeing nodes when necessary.
+        - : Recursively frees all nodes in the Trie.
+    - **Structure**:
+        - Each node contains an array of children (for each alphabet letter) and counters to keep track of word occurrences.
+
+2. **Treap (treap.c)**:
+    - A Treap is a randomized binary search tree that maintains the properties of both a binary search tree and a heap, allowing for quick insertion, deletion, and search operations.
+    - **Key Functions**:
+        - : Creates a new node with a value and priority.
+        - : Adds a node to the Treap, balancing the tree as necessary based on priorities.
+        - : Removes a node while maintaining tree balance.
+        - : Frees memory allocated for the Treap nodes.
+        - Traversal functions: , , and  for various tree traversal methods.
+    - **Structure**:
+        - Each node includes pointers to its left and right children, a parent pointer, a key, and a priority value which helps maintain the heap property.
 
 ### Tech Stack
-The project is written in C, utilizing fundamental libraries such as  for input/output and  for memory management. It does not rely on any external dependencies, ensuring that it can be easily compiled and run in any standard C environment.
+- **Programming Language**: C
+- **Libraries Used**: Standard libraries for memory management () and standard input/output functions ().
 
-### Usage
-The provided  functions in both  and  demonstrate how to utilize the data structures. Users can initialize a data structure, perform insertions and deletions, and traverse to view stored values.
+### Usage Flow
+- The project's main functionality is demonstrated via two  functions located in  and , showcasing basic usage of each data structure – inserting, deleting, and printing values or counts.
 
-This repository provides robust implementations of a Trie and a Treap suitable for educational purposes and as a building block for more complex data applications.
+Overall, the TFCSSC repository serves as a practical resource for engineers looking to understand and implement Trie and Treap data structures, with examples of insertion and deletion operations clearly laid out.
