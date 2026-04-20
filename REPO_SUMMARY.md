@@ -1,33 +1,30 @@
-## Repository Summary: TFCSSC
+# TFCSSC Repository Overview
 
-### Project Overview
-The TFCSSC (presumably short for Trie and Treap Structures) repository provides a C implementation of two fundamental data structures: Tries and Treaps. These structures are useful in various applications such as text processing and efficient data retrieval, showcasing efficient insertion, deletion, and traversal capabilities.
+## Project Description
+The TFCSSC repository contains implementations of two data structures: a Trie and a Treap. These structures are fundamental in computer science for efficient data storage and retrieval. The Trie is particularly useful for handling strings, while the Treap combines properties of binary search trees and heaps to maintain balance during insertions and deletions.
 
-### Main Components
-1. **Trie Implementation ():**
-   - A Trie (pronounced try) is a tree-like data structure that stores a dynamic set of strings, where the keys are usually strings. 
-   - **Key Functions:**
-     - : Initializes a new trie node.
-     - : Inserts a string into the trie.
-     - : Deletes a string from the trie, managing the node's children properly.
-     - : Frees the memory allocated for the trie.
+## Main Components
+1. **Trie Implementation ()**:
+   - **Data Structure**: A  is represented as a node with a count of words and an array of child pointers (one per alphabet letter, a-z).
+   - **Functions**:
+     - : Initializes a new Trie node.
+     - : Inserts a string into the Trie.
+     - : Deletes a string from the Trie.
+     - : Frees all allocated memory associated with the Trie.
 
-2. **Treap Implementation ():**
-   - A Treap is a binary search tree (BST) that maintains a heap property based on priorities assigned to the nodes.
-   - **Key Functions:**
-     - : Initializes a new treap node with specified value and priority.
-     -  and : Perform rotations to maintain the heap property.
-     - : Inserts a node, balancing the tree as necessary.
-     - : Deletes a node while ensuring the structure remains balanced.
-     - : Frees the memory allocated for the treap.
-     - , , : Tree traversal methods displaying node values in respective orders.
+2. **Treap Implementation ()**:
+   - **Data Structure**: A Treap node contains a key and a priority along with links to its left and right children and its parent.
+   - **Functions**:
+     - : Allocates and initializes a new Treap node.
+     - : Inserts a new node, maintaining the heap properties.
+     - : Deletes a node and rebalances the Treap as necessary.
+     - : Frees the memory allocated for the Treap.
+     - Utility functions for traversing the Treap with in-order, pre-order, and post-order methods, along with calculating its height.
 
-### Tech Stack
-- **Language:** C
-- **Data Structures:** Trie and Treap
-- **Memory Management:** Manual allocation and deallocation using  and                total        used        free      shared  buff/cache   available
-Mem:        16373468     1437416    12676616       41896     2628704    14936052
-Swap:        3145724           0     3145724, necessitating careful handling to avoid memory leaks.
+## Tech Stack
+- **Language**: C
+- **Memory Management**: Manual memory allocation and deallocation using  and 
+- **Data Structures**: The project primarily utilizes custom-defined structures and pointers, leveraging C's capabilities for low-level memory management.
 
-### Additional Notes
-The repository offers an educational perspective on implementing Tries and Treaps, with practical examples included in the  functions of both components. It serves as a resource for engineers looking to understand these data structures and their operational characteristics in the C programming language.
+## Conclusion
+The TFCSSC repository provides fundamental data structure implementations that can be utilized in various applications requiring efficient string handling and balanced search tree operations. The straightforward approach to managing memory and data highlights C’s performance capabilities while providing an insightful exploration of Trie and Treap functionalities.
