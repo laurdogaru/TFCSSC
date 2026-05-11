@@ -1,41 +1,34 @@
-# TFCSSC Repository Overview
+## Summary of the Repository
 
-The **TFCSSC** repository implements two fundamental data structures: a **Trie** and a **Treap**. Both structures demonstrate basic operations such as insertion, deletion, and traversal, providing a foundation for efficient data processing and organization.
+This repository contains an implementation of two fundamental data structures in C: a Trie and a Treap. These structures are essential for efficiently managing dynamic sets of strings and integers respectively.
 
-## Main Components
+### Project Overview
+- **Trie**: A Trie, or prefix tree, is designed to store strings in a way that optimizes prefixes and enables fast retrieval, insertion, and deletion of words.
+- **Treap**: A Treap is a hybrid data structure that combines properties of binary search trees and heaps. It supports efficient insertion, deletion, and lookup while maintaining a heap property based on priority.
 
-1. **Trie (trie.c)**
-    - A Trie is a tree-like data structure used for storing a dynamic set of strings or associative arrays. It is particularly useful for tasks involving prefix-based searching, such as autocompletion or spell checking.
-    - **Key Functions**:
-        - : Initializes a new Trie node.
-        - : Inserts a string into the Trie.
-        - : Deletes a string from the Trie.
-        - : Recursively frees the memory allocated to the Trie.
-    - **Data Members**:
-        - : Tracks the number of times a string is inserted.
-        - : The number of children nodes, indicating how many links to other nodes exist.
+### Main Components
+1. **Trie Implementation ()**:
+   - **Data Structure**: A  struct which includes a count of occurrences and an array of child pointers for 26 lowercase letters.
+   - **Functions**:
+     - : Initializes a new Trie node.
+     - : Inserts a string into the Trie, incrementing counts as necessary.
+     - : Removes a string from the Trie, managing node memory correctly.
+     - : Recursively frees all nodes in the Trie.
 
-2. **Treap (treap.c)**
-    - A Treap is a hybrid data structure that combines properties of a binary search tree and a heap, maintaining a balanced structure based on the priority of each node.
-    - **Key Functions**:
-        - : Initializes a new Treap node.
-        - : Inserts a node while maintaining Treap properties.
-        - : Deletes a node and rebalances the Treap if necessary.
-        - : Frees memory allocated for the Treap recursively.
-        - , , : Methods for traversing the Treap in different orders.
-    - **Data Members**:
-        - : The value of the node.
-        - : Used to maintain the heap property, allowing for efficient balancing.
+2. **Treap Implementation ()**:
+   - **Data Structure**: A  struct with a key, priority, and pointers to left, right, and parent nodes.
+   - **Functions**:
+     - : Allocates and initializes a new node with its key and priority.
+     - : Inserts a key with a given priority into the Treap, applying rotations to maintain heap order.
+     - : Deletes a specified key while maintaining structure integrity and balancing.
+     - : Recursively frees all nodes in the Treap.
+     - Traversal functions (, , ) to visit nodes in different orders.
 
-## Tech Stack
+### Tech Stack
+- **Language**: C
+- **Memory Management**: Uses dynamic memory allocation via  and                total        used        free      shared  buff/cache   available
+Mem:        16373468      950812    13310564       45312     2481576    15422656
+Swap:        3145724           0     3145724.
+- **Data Structures**: The repository employs pointers and structs for explicit management of data structures.
 
-- **Programming Language**: C
-- **Memory Management**: Manual (using  and                total        used        free      shared  buff/cache   available
-Mem:        16373468     1409528    12690616       45168     2646072    14963940
-Swap:        3145724           0     3145724 for node allocation and deallocation)
-
-## Usage
-
-The implementation in both  and  includes a  function demonstrating the usage of the data structures through various function calls, including the insertion and deletion of nodes (or strings) and basic traversal operations.
-
-This repository serves as a solid educational foundation for engineers seeking to understand and implement Tries and Treaps in C, emphasizing their respective algorithms and memory management techniques.
+Overall, this project provides foundational implementations that demonstrate the usage of Trie and Treap for string and integer data management, important concepts in computer science.
